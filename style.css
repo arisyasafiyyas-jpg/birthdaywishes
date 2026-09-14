@@ -1,0 +1,608 @@
+/* =========================
+   BASIC
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    overflow: hidden;
+    background: #071426;
+}
+
+.page {
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    display: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.page.active {
+    display: flex;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+button {
+    border: none;
+    padding: 15px 32px;
+    border-radius: 40px;
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-3px) scale(1.03);
+}
+
+
+/* =========================
+   PAGE 1 — OPENING
+========================= */
+
+.opening {
+    background:
+        radial-gradient(circle at 50% 30%, #17345e 0%, #0a1a31 40%, #040c18 100%);
+    color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.gift {
+    font-size: 120px;
+    margin-bottom: 25px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.opening h1 {
+    font-family: "Kalam", cursive;
+    font-size: clamp(30px, 5vw, 55px);
+    line-height: 1.25;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.opening button {
+    margin-top: 35px;
+    background: #f8f0df;
+    color: #123c7a;
+}
+
+.small-text {
+    margin-top: 18px;
+    font-family: "Kalam", cursive;
+    color: #b9c5d6;
+    font-size: 15px;
+}
+
+.stars {
+    position: absolute;
+    top: 15%;
+    left: 18%;
+    color: #f7d47b;
+    font-size: 35px;
+}
+
+.star {
+    position: absolute;
+    color: #78aaf5;
+    font-size: 30px;
+}
+
+.star-1 {
+    top: 20%;
+    right: 20%;
+}
+
+.star-2 {
+    bottom: 20%;
+    left: 25%;
+    color: #f7d47b;
+}
+
+.star-3 {
+    bottom: 25%;
+    right: 25%;
+}
+
+
+/* =========================
+   PAGE 2 — BIRTHDAY
+========================= */
+
+.birthday {
+    background: #f8f0df;
+    color: #12366d;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.birthday h1 {
+    font-size: clamp(45px, 7vw, 90px);
+    line-height: 0.95;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.corner-doodle {
+    position: absolute;
+    top: 45px;
+    right: 70px;
+    font-size: 50px;
+}
+
+.tiny {
+    position: absolute;
+    top: 60px;
+    left: 70px;
+    font-family: "Kalam", cursive;
+    font-size: 18px;
+    transform: rotate(-8deg);
+}
+
+.underline {
+    width: 280px;
+    height: 6px;
+    background: #3475d1;
+    border-radius: 50%;
+    margin: 25px auto;
+    transform: rotate(-3deg);
+}
+
+.to {
+    font-family: "Kalam", cursive;
+    font-size: 20px;
+}
+
+.name {
+    margin-top: 8px;
+    padding: 5px 35px;
+    background: #b9d3f5;
+    font-family: "Kalam", cursive;
+    font-size: 28px;
+    transform: rotate(-1deg);
+}
+
+.funny {
+    margin-top: 25px;
+    font-family: "Kalam", cursive;
+    font-size: 21px;
+    line-height: 1.5;
+}
+
+.balloons {
+    position: absolute;
+    bottom: 50px;
+    left: 10%;
+    font-size: 55px;
+}
+
+.birthday button {
+    margin-top: 35px;
+    background: #3475d1;
+    color: white;
+}
+
+
+/* =========================
+   PAGE 3 — MEMORIES
+========================= */
+
+.memories {
+    background: #08172b;
+    color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.memories h1 {
+    font-family: "Kalam", cursive;
+    text-align: center;
+    font-size: clamp(35px, 5vw, 60px);
+    line-height: 1;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+}
+
+.photos {
+    width: min(850px, 90%);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    align-items: center;
+}
+
+.photo {
+    background: #f7f0df;
+    color: #102f5d;
+    padding: 10px 10px 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    transition: 0.3s ease;
+}
+
+.photo:hover {
+    transform: translateY(-8px) rotate(0deg) !important;
+}
+
+.photo:nth-child(1) {
+    transform: rotate(-5deg);
+}
+
+.photo:nth-child(2) {
+    transform: rotate(4deg);
+}
+
+.photo:nth-child(3) {
+    transform: rotate(-3deg);
+}
+
+.photo:nth-child(4) {
+    transform: rotate(5deg);
+}
+
+.photo img,
+.empty-photo {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    background: #d8e0eb;
+}
+
+.empty-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+}
+
+.photo p {
+    font-family: "Kalam", cursive;
+    font-size: 16px;
+    margin-top: 8px;
+}
+
+.memories button {
+    margin-top: 35px;
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+
+/* =========================
+   PAGE 4 — SECRET PASSWORD
+========================= */
+
+.secret {
+    background:
+        radial-gradient(circle at 50% 30%, #17345e 0%, #0b1b32 55%, #030913 100%);
+    color: white;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.secret-box {
+    width: min(430px, 85%);
+    padding: 45px 40px;
+    background: rgba(248, 240, 223, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.secret-box h1 {
+    font-family: "Kalam", cursive;
+    font-size: clamp(40px, 6vw, 55px);
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.secret-box > p {
+    font-family: "Kalam", cursive;
+    font-size: 18px;
+    color: #b9c5d6;
+    margin-bottom: 25px;
+}
+
+.secret-box input {
+    width: 100%;
+    padding: 15px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+    outline: none;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.secret-box input::placeholder {
+    color: #aebbd0;
+}
+
+.secret-box input:focus {
+    border-color: #78aaf5;
+    box-shadow: 0 0 15px rgba(120, 170, 245, 0.2);
+}
+
+.secret-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.secret-buttons button {
+    background: #f8f0df;
+    color: #123c7a;
+}
+
+.secret-buttons .skip-btn {
+    background: transparent;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.secret-buttons .skip-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+#secretError {
+    min-height: 22px;
+    margin-top: 15px;
+    margin-bottom: 0;
+    color: #ff9b9b;
+    font-size: 14px;
+}
+
+
+/* =========================
+   PAGE 5 — LETTER
+========================= */
+
+.letter {
+    background: #0b1b32;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.paper {
+    width: min(650px, 85%);
+    padding: 55px 65px;
+    background: #f8f0df;
+    color: #173765;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+    transform: rotate(-1deg);
+    position: relative;
+}
+
+.paper::before {
+    content: "📎";
+    position: absolute;
+    top: -25px;
+    left: 20px;
+    font-size: 45px;
+}
+
+.paper p {
+    font-family: "Kalam", cursive;
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 22px;
+}
+
+.paper .letter-title {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.signature {
+    font-family: "Kalam", cursive;
+    font-size: 20px;
+    text-align: right;
+    margin-top: 25px;
+}
+
+.letter button {
+    margin-top: 35px;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+
+/* =========================
+   PAGE 6 — ENDING
+========================= */
+
+.ending {
+    background:
+        radial-gradient(circle at 50% 30%, #17345e 0%, #08172b 55%, #030913 100%);
+    color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.ending h1 {
+    font-family: "Kalam", cursive;
+    font-size: clamp(45px, 7vw, 75px);
+    letter-spacing: 5px;
+}
+
+.ending p {
+    font-family: "Kalam", cursive;
+    font-size: 22px;
+    line-height: 1.5;
+    margin-top: 20px;
+}
+
+.moon {
+    position: absolute;
+    top: 12%;
+    right: 15%;
+    font-size: 75px;
+    color: #f7d47b;
+}
+
+.ending-stars {
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    font-size: 30px;
+    color: #f7d47b;
+}
+
+.cake {
+    font-size: 75px;
+    margin: 35px 0;
+}
+
+.ending button {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes float {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .page {
+        min-height: 100vh;
+    }
+
+    .opening h1 {
+        font-size: 35px;
+    }
+
+    .gift {
+        font-size: 90px;
+    }
+
+    .corner-doodle {
+        top: 25px;
+        right: 25px;
+        font-size: 35px;
+    }
+
+    .tiny {
+        top: 30px;
+        left: 25px;
+        font-size: 14px;
+    }
+
+    .birthday h1 {
+        font-size: 50px;
+    }
+
+    .balloons {
+        bottom: 25px;
+        left: 5%;
+        font-size: 40px;
+    }
+
+    .photos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        width: 85%;
+    }
+
+    .memories h1 {
+        font-size: 35px;
+        margin-bottom: 20px;
+    }
+
+    .photo {
+        padding: 7px 7px 10px;
+    }
+
+    .photo p {
+        font-size: 13px;
+    }
+
+    .paper {
+        width: 88%;
+        padding: 35px 30px;
+    }
+
+    .paper p {
+        font-size: 17px;
+    }
+
+    .paper .letter-title {
+        font-size: 24px;
+    }
+
+    .moon {
+        font-size: 55px;
+        top: 10%;
+        right: 10%;
+    }
+
+
+    /* PASSWORD PAGE MOBILE */
+
+    .secret-box {
+        width: 85%;
+        padding: 35px 25px;
+    }
+
+    .secret-box h1 {
+        font-size: 40px;
+    }
+
+    .secret-box > p {
+        font-size: 16px;
+    }
+
+    .secret-buttons {
+        flex-direction: column;
+    }
+
+    .secret-buttons button {
+        width: 100%;
+    }
+}

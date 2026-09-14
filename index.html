@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wishes for Isyraf</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+    <!-- song -->
+    <audio id="birthdaySong" autoplay>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+
+<body>
+
+    <!-- ==================== PAGE 1 ==================== -->
+    <section class="page opening" id="opening">
+
+        <div class="stars">✦</div>
+        <div class="star star-1">✧</div>
+        <div class="star star-2">✦</div>
+        <div class="star star-3">✧</div>
+
+        <div class="gift">🎁</div>
+
+        <h1>HAII<br>nak hadiah dakk?<br>tekan bawah tuu</h1>
+
+        <button onclick="nextPage('birthday')">
+            OPEN IT&nbsp; →
+        </button>
+
+        <p class="small-text">(walaupun tak seberapa, harap hang suka haha)</p>
+
+    </section>
+
+
+    <!-- ==================== PAGE 2 ==================== -->
+    <section class="page birthday" id="birthday">
+
+        <div class="corner-doodle">♔</div>
+
+        <p class="tiny">straight A+ SPM togetherrr</p>
+
+        <h1>HAPPY<br>BIRTHDAY!</h1>
+
+        <div class="underline"></div>
+
+        <p class="to">to my hb</p>
+
+        <div class="name">
+            CAPMOYYYYYYYYY
+        </div>
+
+        <p class="funny">
+            lambat siot besday<br>
+            aku dah 8 bulan 16y/o, hg baru masuk haha nub
+        </p>
+
+        <button onclick="nextPage('memories')">
+            NEXT&nbsp; →
+        </button>
+
+    </section>
+
+
+    <!-- ==================== PAGE 3 ==================== -->
+    <section class="page memories" id="memories">
+
+        <h1>OUR RANDOM<br>MEMORIES</h1>
+
+        <div class="photos">
+
+            <div class="photo photo-1">
+                <img src="images1.jpg" alt="Memory 1">
+                <p>first competitionnn</p>
+            </div>
+
+            <div class="photo photo-2">
+                <img src="images2.jpg" alt="Memory 2">
+                <p>kita bole jadi part time spiderman habih spm nanti,
+                    misi selamatkan kedah
+                </p>
+            </div>
+
+            <div class="photo photo-3">
+                <img src="images3.jpg" alt="Memory 3">
+                <p>sec competition</p>
+            </div>
+
+            <div class="photo photo-4">
+                <img src="images4.jpg" alt="Memory 4">
+                <p>isyraf mini version</p>
+            </div>
+
+        </div>
+
+        <button onclick="nextPage('secret')">
+            NEXT&nbsp; →
+        </button>
+
+    </section>
+
+    <!--PASSWORD -->
+    <section class="page secret" id="secret">
+
+        <div class="secret-box">
+
+            <h1>and..</h1>
+
+            <p>sebelum bukak wish ni, masukkan passwordd yang aku habaq</p>
+
+            <input 
+                type="password" 
+                id="secretPassword"
+                placeholder="enter password"
+            >
+
+            <div class="secret-buttons">
+                <button onclick="checkSecretPassword()">
+                    UNLOCK →
+                </button>
+
+                <button class="skip-btn" onclick="nextPage('ending')">
+                    SKIP
+                </button>
+            </div>
+
+            <p id="secretError"></p>
+
+        </div>
+
+    </section>
+
+    <!-- ==================== PAGE 4 ==================== -->
+    <section class="page letter" id="letter">
+
+        <div class="paper">
+
+            <p class="letter-title">Happy birthday!</p>
+
+            <p>
+                Thankyouu jadi kawan aku selama ni dan sudi teguq apa yang aku salah.
+                Walaupun aku annoying, hg annoying lagi la tapi.
+                Hadiah birthday hang tadakla sehebat yang hang mau tu. Gilak ah nak bagi iphone kat hang,
+                Aku pun phone bergaris dahni hmmm. Hang kot kena beli kat aku HAHAHAHHAHA
+            </p>
+
+            <p>
+                Aku doakan hang panjang umur, sentiasa sihat dan dapat banggakan mama dengan babah hangg.
+                Semoga kita dapat result SPM yang cemerlang dan hg dapat masuk U yang terbaik untuk hang.
+                Jangan duk buat lupa aku tua nanti pulakk. 
+            </p>
+
+            <p>
+                Sentiasa jadi diri hangg !
+            </p>
+
+            <div class="signature">
+                — ari imut ♡
+            </div>
+
+        </div>
+
+        <button onclick="nextPage('ending')">
+            NEXT&nbsp; →
+        </button>
+
+    </section>
+
+
+    <!-- ==================== PAGE 5 ==================== -->
+    <section class="page ending" id="ending">
+
+        <div class="moon">☾</div>
+
+        <div class="ending-stars">
+            ✦ &nbsp;&nbsp; ✧ &nbsp;&nbsp; ✦
+        </div>
+
+        <h1>TUJAAA DARII AKUU</h1>
+
+        <p>
+            tunggu hadiah esokk<br>
+            hadiah hang srs paling speciall
+        </p>
+
+        <div class="cake">🎂</div>
+
+        <button onclick="nextPage('opening')">
+            ↻ &nbsp; REPLAY
+        </button>
+
+    </section>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
