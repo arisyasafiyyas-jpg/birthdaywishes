@@ -669,23 +669,32 @@ button:hover {
     color: white;
 }
 
-/* ==================== LETTER PAGE SCROLL ==================== */
+/* ===== LETTER PAGE SCROLL FIX ===== */
 
-.letter {
-    min-height: 100vh;
-    height: auto;
-    overflow-y: auto;
-    overflow-x: hidden;
-    box-sizing: border-box;
-
-    padding-top: 60px;
-    padding-bottom: 60px;
+body {
+    overflow: auto;
 }
 
-/* Letter kekal macam asal */
-.paper {
-    max-height: none;
-    overflow: visible;
+.page.letter {
+    height: 100vh !important;
+    min-height: 100vh;
+    overflow-y: auto !important;
+    overflow-x: hidden;
+    justify-content: flex-start;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.page.letter .paper {
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+    flex-shrink: 0;
+}
+
+.page.letter > button {
+    flex-shrink: 0;
+    margin-bottom: 20px;
 }
 
 /* =========================
