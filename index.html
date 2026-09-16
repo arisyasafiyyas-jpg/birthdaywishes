@@ -14,11 +14,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-    <!-- song -->
-    <audio id="birthdaySong" autoplay>
-        <source src="music.mp3" type="audio/mpeg">
-    </audio>
-
+<!-- song -->
+<audio id="birthdaySong" autoplay>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
 
 <body>
 
@@ -32,13 +31,18 @@
 
         <div class="gift">🎁</div>
 
-        <h1>HAII<br>nak hadiah dakk?<br>tekan bawah tuu</h1>
+        <h1>
+            haluu<br>
+            Isyraf Daniel<br>
+        </h1>
 
         <button onclick="nextPage('birthday')">
             OPEN IT&nbsp; →
         </button>
 
-        <p class="small-text">(walaupun tak seberapa, harap hang suka haha)</p>
+        <p class="small-text">
+            (simple gift untuk hang, semoga hang suka !)
+        </p>
 
     </section>
 
@@ -48,13 +52,20 @@
 
         <div class="corner-doodle">♔</div>
 
-        <p class="tiny">straight A+ SPM togetherrr</p>
+        <p class="tiny">
+            straight A+ SPM !!
+        </p>
 
-        <h1>HAPPY<br>BIRTHDAY!</h1>
+        <h1>
+            HAPPY<br>
+            BIRTHDAY!
+        </h1>
 
         <div class="underline"></div>
 
-        <p class="to">to my hb</p>
+        <p class="to">
+            to my hb,
+        </p>
 
         <div class="name">
             CAPMOYYYYYYYYY
@@ -62,76 +73,174 @@
 
         <p class="funny">
             lambat siot besday<br>
-            aku dah 8 bulan 16y/o, hg baru masuk haha nub
+            aku dah 8 bulan f4, hg baru masuk haha nub
         </p>
 
-        <button onclick="nextPage('memories')">
+        <button onclick="nextPage('memories1')">
             NEXT&nbsp; →
         </button>
 
     </section>
 
 
-    <!-- ==================== PAGE 3 ==================== -->
-    <section class="page memories" id="memories">
+    <!-- ==================== PAGE 3A ==================== -->
+    <section class="page memories1" id="memories1">
 
-        <h1>OUR RANDOM<br>MEMORIES</h1>
+        <h1>
+            GALLERY<br>
+        </h1>
 
         <div class="photos">
 
             <div class="photo photo-1">
                 <img src="images1.jpg" alt="Memory 1">
-                <p>first competitionnn</p>
+                <p>
+                    first competition !
+                </p>
             </div>
 
             <div class="photo photo-2">
                 <img src="images2.jpg" alt="Memory 2">
-                <p>kita bole jadi part time spiderman habih spm nanti,
+                <p>
+                    kita bole jadi part time spiderman habih spm nanti,
                     misi selamatkan kedah
                 </p>
             </div>
 
             <div class="photo photo-3">
                 <img src="images3.jpg" alt="Memory 3">
-                <p>sec competition</p>
+                <p>
+                    sec competition
+                </p>
             </div>
 
             <div class="photo photo-4">
                 <img src="images4.jpg" alt="Memory 4">
-                <p>isyraf mini version</p>
+                <p>
+                    isyraf mini version
+                </p>
             </div>
 
         </div>
 
-        <button onclick="nextPage('secret')">
+        <button onclick="nextPage('memories2')">
             NEXT&nbsp; →
         </button>
 
     </section>
 
-    <!--PASSWORD -->
+
+    <!-- ==================== PAGE 3B ==================== -->
+    <section class="page memories2" id="memories2">
+
+        <h1>
+            GALLERY<br>
+        </h1>
+
+        <div class="photos">
+
+            <div class="photo photo-1">
+                <img src="images5.jpg" alt="Memory 1">
+                <p>
+                    support system
+                </p>
+            </div>
+
+            <div class="photo photo-2">
+                <img src="images6.jpg" alt="Memory 2">
+                <p>
+                    another spiderman HAHAHAHA #selamatkankedah
+                </p>
+            </div>
+
+            <div class="photo photo-3">
+                <img src="images7.jpg" alt="Memory 3">
+                <p>
+                    study kimia demi cikgu sham yang tersayang 
+                </p>
+            </div>
+
+            <div class="photo photo-4">
+                <img src="images8.jpg" alt="Memory 4">
+                <p>
+                    hang mesti tengah pikiaq nak makan apa lagi kan
+                </p>
+            </div>
+
+        </div>
+
+        <button onclick="nextPage('video')">
+            NEXT&nbsp; →
+        </button>
+
+    </section>
+
+<!-- ==================== VIDEO PAGE ==================== -->
+<section class="page video-page" id="video">
+
+    <div class="video-content">
+
+        <p class="video-small">
+            okey nexttt issss...
+        </p>
+
+        <h1>
+            A CLIP OF ICAPMOY<br>
+        </h1>
+
+        <div class="video-box">
+
+            <video controls playsinline>
+                <source src="video.mp4" type="video/mp4">
+                Your browser does not support video.
+            </video>
+
+        </div>
+
+        <p class="video-caption">
+            banyak jugak video hang dalam gallery aku ih
+        </p>
+
+        <button onclick="nextPage('secret')">
+            NEXT&nbsp; →
+        </button>
+
+    </div>
+
+</section>
+
+    <!-- ==================== PASSWORD ==================== -->
     <section class="page secret" id="secret">
 
         <div class="secret-box">
 
-            <h1>and..</h1>
+            <h1>
+                and..
+            </h1>
 
-            <p>sebelum bukak wish ni, masukkan passwordd yang aku habaq</p>
+            <p>
+                sebelum bukak wish ni, masukkan passwordd yang aku habaq
+            </p>
 
-            <input 
-                type="password" 
+            <input
+                type="password"
                 id="secretPassword"
                 placeholder="enter password"
             >
 
             <div class="secret-buttons">
+
                 <button onclick="checkSecretPassword()">
                     UNLOCK →
                 </button>
 
-                <button class="skip-btn" onclick="nextPage('ending')">
+                <button
+                    class="skip-btn"
+                    onclick="nextPage('ending')"
+                >
                     SKIP
                 </button>
+
             </div>
 
             <p id="secretError"></p>
@@ -140,24 +249,42 @@
 
     </section>
 
-    <!-- ==================== PAGE 4 ==================== -->
+
+    <!-- ==================== PAGE 5 : LETTER ==================== -->
     <section class="page letter" id="letter">
 
         <div class="paper">
 
-            <p class="letter-title">Happy birthday!</p>
-
-            <p>
-                Thankyouu jadi kawan aku selama ni dan sudi teguq apa yang aku salah.
-                Walaupun aku annoying, hg annoying lagi la tapi.
-                Hadiah birthday hang tadakla sehebat yang hang mau tu. Gilak ah nak bagi iphone kat hang,
-                Aku pun phone bergaris dahni hmmm. Hang kot kena beli kat aku HAHAHAHHAHA
+            <p class="letter-title">
+                Happy birthday!
             </p>
 
             <p>
-                Aku doakan hang panjang umur, sentiasa sihat dan dapat banggakan mama dengan babah hangg.
-                Semoga kita dapat result SPM yang cemerlang dan hg dapat masuk U yang terbaik untuk hang.
-                Jangan duk buat lupa aku tua nanti pulakk. 
+                Thankyouu jadi kawan aku selama ni dan sudi teguq apa yang aku salah. 
+                thankiu jugak sebab selalu teguq aku pasai handsockk, dengaq semua masalah aku,
+                dengaq aku cita pasai memanah padahai hg tak kisah pun pasai tu, 
+                dengaq aku cita pasai zuzu. maseh dengaq semua benda walaupun aku annoying. 
+                HAHAHAHA TAPI HANG ANNOYING LAGIIIII (joks).
+                hadiah birthday hang tadakla sehebat yang hang mau tu.
+                gilak ah nak bagi iphone kat hang,
+                aku pun phone bergaris dahni hmmm.
+                hang kot kena beli kat aku HAHAHAHHAHA
+            </p>
+
+            <p>
+                Aku minta maaf if kadang aku melebih ka bila melawak dengan hang. 
+                Kalau nanti dah ikut haluan masing-masing, aku harap hang simpan rahsia-rahsia aku
+                yang hang tau dan jaga aib akuuu. Makaseh icap sebab selalu tolong aku, masuk competition dengan aku.
+                Jujurlah aku suka kawan dengan hang. tatau sebab apa. if aku duk dengan hang, masalah hat ada dalam
+                pala, terus hilang.
+            </p>
+
+            <p>
+                Aku doakan hang panjang umur, sentiasa sihat dan dapat banggakan
+                mama dengan babah hangg.
+                Semoga kita dapat result SPM yang cemerlang dan hg dapat masuk U
+                yang terbaik untuk hang.
+                Jangan duk buat lupa aku tua nanti pulakk.
             </p>
 
             <p>
@@ -177,23 +304,29 @@
     </section>
 
 
-    <!-- ==================== PAGE 5 ==================== -->
+    <!-- ==================== PAGE 6 : ENDING ==================== -->
     <section class="page ending" id="ending">
 
-        <div class="moon">☾</div>
+        <div class="moon">
+            ☾
+        </div>
 
         <div class="ending-stars">
             ✦ &nbsp;&nbsp; ✧ &nbsp;&nbsp; ✦
         </div>
 
-        <h1>TUJAAA DARII AKUU</h1>
+        <h1>
+            TUJAAA DARII AKUU
+        </h1>
 
         <p>
             tunggu hadiah esokk<br>
             hadiah hang srs paling speciall
         </p>
 
-        <div class="cake">🎂</div>
+        <div class="cake">
+            🎂
+        </div>
 
         <button onclick="nextPage('opening')">
             ↻ &nbsp; REPLAY
